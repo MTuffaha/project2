@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'signup_page.dart';
+import 'profile.dart'; // Import your ProfileScreen file here
+import 'login_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 
       ),
-      home: SignUpPage(), // signup page as home temporarily
+      home: LoginPage(), // signup page as home temporarily
     );
   }
 }
