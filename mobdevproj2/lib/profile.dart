@@ -35,11 +35,17 @@ class _ProfileFormState extends State<ProfileForm> {
   late String _email = '';
   late String _address = '';
 
+  // Variables to track changes
+  late String _updatedName;
+  late String _updatedAddress;
+
   @override
   void initState() {
     super.initState();
     _formKey = GlobalKey<FormState>();
     _nameController = TextEditingController(text: _name);
+    _updatedName = _name;
+    _updatedAddress = _address;
     // Load user data when the page is initialized
     _loadUserData();
   }
@@ -62,6 +68,8 @@ class _ProfileFormState extends State<ProfileForm> {
         _email = user.email ?? '';
         _address = userData['address'] ?? '';
         _nameController.text = _name; // Update the controller value
+        _updatedName = _name;
+        _updatedAddress = _address;
       });
     }
   }
@@ -73,9 +81,19 @@ class _ProfileFormState extends State<ProfileForm> {
         if (user != null) {
           // Update user data in Firestore
           await _firestore.collection('users').doc(user.uid).set({
-            'name': _nameController.text, // Use the controller value
+            'name': _nameController.text,
             'address': _address,
           }, SetOptions(merge: true));
+
+          // Update user's email for sign-in
+          await user.verifyBeforeUpdateEmail(_email);
+
+          // Update the state variables after form submission
+          setState(() {
+            _updatedName = _nameController.text;
+            _updatedAddress = _address;
+            _email = _email; // Update the email display
+          });
 
           // User data successfully updated
           print('User data updated');
@@ -95,10 +113,30 @@ class _ProfileFormState extends State<ProfileForm> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 16.0),
           child: Text(
-            'Hello, $_name!',
+            'Hello, $_updatedName!',
             style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        // Display user's email
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          child: Text(
+            'Email: $_email',
+            style: TextStyle(
+              fontSize: 18.0,
+            ),
+          ),
+        ),
+        // Display user's address
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          child: Text(
+            'Address: $_updatedAddress',
+            style: TextStyle(
+              fontSize: 18.0,
             ),
           ),
         ),
