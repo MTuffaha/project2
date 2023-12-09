@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 
       ),
-      home: LoginPage(), // signup page as home temporarily
+      home: LoginPage(),
     );
   }
 }

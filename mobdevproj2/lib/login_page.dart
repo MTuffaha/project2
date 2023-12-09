@@ -5,6 +5,7 @@ import 'signup_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'profile.dart';
+import 'Homepage.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key});
@@ -28,7 +29,7 @@ class LoginPage extends StatelessWidget {
       // Navigate to the ProfileScreen after successful sign-in
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => ProfilePage(),
+          builder: (context) => FoodDeliveryApp(),
         ),
       );
 

@@ -55,12 +55,101 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/Italian.jpg
+    - assets/SpaghettiBolognese.jpg
+    - assets/ChickenAlfredo.jpg
+    - assets/Risotto.jpg
+    - assets/CapreseSalad.jpg
+    - assets/Bruschetta.jpg
+    - assets/CalamariFritti.jpg
+    - assets/Tiramisu.jpg
+    - assets/Cannoli.jpg
+    - assets/PannaCotta.jpg
+    - assets/Japanese.jpg
+    - assets/AgedashiTofu.jpg
+    - assets/Edamame.jpg
+    - assets/MisoSoup.jpg
+    - assets/Ramen.jpg
+    - assets/Sushi.jpg
+    - assets/TeriyakiSalmon.jpg
+    - assets/Dorayaki.jpg
+    - assets/GreenTeaIceCream.jpg
+    - assets/MatchaCheesecake.jpg
+    - assets/Mexican.jpg
+    - assets/Guacamole.jpg
+    - assets/Salsa.jpg
+    - assets/Quesadilla.jpg
+    - assets/ChickenEnchiladas.jpg
+    - assets/ShrimpFajitas.jpg
+    - assets/Tacos.jpg
+    - assets/Churros.jpg
+    - assets/Flan.jpg
+    - assets/TresLechesCake.jpg
+    - assets/Indian.jpg
+    - assets/AlooTikki.jpg
+    - assets/Pakoras.jpg
+    - assets/Samosas.jpg
+    - assets/ChickenTikkaMasala.jpg
+    - assets/LambCurry.jpg
+    - assets/VegetableBiryani.jpg
+    - assets/GulabJamun.jpg
+    - assets/Jalebi.jpg
+    - assets/Kheer.jpg
+    - assets/Chinese.jpg
+    - assets/SpringRolls.jpg
+    - assets/PekingDuck.jpg
+    - assets/DimSum.jpg
+    - assets/KungPaoShrimp.jpg
+    - assets/MongolianBeef.jpg
+    - assets/SweetSourChicken.jpg
+    - assets/FortuneCookies.jpg
+    - assets/MangoPudding.jpg
+    - assets/RedBeanSoup.jpg
+    - assets/Mediterranean.jpg
+    - assets/BabaGanoush.jpg
+    - assets/GreekSalad.jpg
+    - assets/HummusPita.jpg
+    - assets/FalafelWrap.jpg
+    - assets/LambKebabs.jpg
+    - assets/Shawarma.jpg
+    - assets/Baklava.jpg
+    - assets/RicePudding.jpg
+    - assets/TahiniCookies.jpg
+    - assets/Thai.jpg
+    - assets/ChickenSatay.jpg
+    - assets/SpringRolls.jpg
+    - assets/TomYumSoup.jpg
+    - assets/BasilFriedRice.jpg
+    - assets/GreenCurry.jpg
+    - assets/PadThai.jpg
+    - assets/CoconutIceCream.jpg
+    - assets/StickyRiceMango.jpg
+    - assets/ThaiPancake.jpg
+    - assets/French.jpg
+    - assets/Escargot.jpg
+    - assets/OnionSoup.jpg
+    - assets/QuicheLorraine.jpg
+    - assets/BeefBourguignon.jpg
+    - assets/CoqauVin.jpg
+    - assets/Ratatouille.jpg
+    - assets/CremeBrulee.jpg
+    - assets/Croissant.jpg
+    - assets/TarteTatin.jpg
+    - assets/American.jpg
+    - assets/BBQRibs.jpg
+    - assets/JalapenoPoppers.jpg
+    - assets/SmokedWings.jpg
+    - assets/BeefBrisket.jpg
+    - assets/GrilledChicken.jpg
+    - assets/PulledPorkSandwich.jpg
+    - assets/ApplePie.jpg
+    - assets/PeachCobbler.jpg
+    - assets/SmoresBrownies.jpg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
